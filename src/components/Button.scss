@@ -1,0 +1,73 @@
+$blue: #228be6;
+$gray: #495057;
+$pink: #f06595;
+
+@mixin button-color($color) {
+  background: $color;
+
+  &.primary {
+    color: $color;
+    background: none;
+    border: 1px solid $color;
+    &:hover {
+      background: $color;
+      color: white;
+    }
+  }
+}
+
+.button {
+  // default styleing for button
+  display: inline-block;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #fff;
+
+  //sizing styling for button
+  &.large {
+    height: 3rem;
+    font-size: 1.25rem;
+    padding: 0 1.25rem;
+  }
+
+  &.medium {
+    height: 2.25rem;
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  &.small {
+    height: 1.75rem;
+    font-size: 0.875rem;
+    padding: 0 0.875rem;
+  }
+
+  //color styling for button
+  &.blue {
+    @include button-color($blue);
+  }
+
+  &.red {
+    @include button-color($pink);
+  }
+
+  &.black {
+    @include button-color($gray);
+  }
+
+  //fullWidth styling for button
+
+  &.fullWidth {
+    width: 100%;
+    & + & {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+
+  & + & {
+    margin-left: 14px;
+  }
+}

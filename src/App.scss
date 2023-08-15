@@ -1,0 +1,12 @@
+.app {
+  width: 512px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 1rem;
+
+  .button-template + .button-template {
+    margin-top: 14px;
+  }
+}
